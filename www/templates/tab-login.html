@@ -1,0 +1,18 @@
+<ion-view title="Connect to Uplift" ng-controller="LoginCtrl">
+    <ion-content has-header="true" padding="true" class="login">
+
+        <button class="icon-left ion-social-facebook button button-block button-facebook {{hideLogin()}}" ng-click="fblogin()">
+            Connect with <b>Facebook</b>
+        </button>
+
+        <button class="icon-left ion-social-twitter button button-block button-calm {{hideLogin()}}" ng-click="twlogin()">
+            Connect with <b>Twitter</b>
+        </button>
+
+         <button class="icon-left ion-close-round button button-block button-positive {{hideLogout()}}" ng-click="logout()">
+            Disconnect Uplift
+        </button>
+
+    </ion-content>
+
+</ion-view>
