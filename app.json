@@ -1,0 +1,7 @@
+{
+    "name": "Uplift",
+    "description": "Share the Love",
+    "repository": "https://github.com/kgilmur/uplift",
+    "logo": "img/tlogo.png",
+    "keywords": ["ionic", "firebase", "sass"]
+}
