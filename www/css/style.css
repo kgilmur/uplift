@@ -27,8 +27,8 @@
   margin-right: -16px !important;
 }
 
-.button-facebook {
-  background-color: #387ef5;
-  border-color: #0c63ee;
-  color: white;
+#facebook {
+  background-color: #387ef5 !important;
+  border-color: #0c63ee !important;
+  color: white !important;
 }

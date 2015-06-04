@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.uplift542168" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Uplift</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Share the Love.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="kgilmur@gmail.com" href="http://ionicframework.com/">
+      Katie Gilmur
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -14,7 +14,10 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+
 </widget>

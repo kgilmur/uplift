@@ -1,13 +1,16 @@
-upliftApp.controller("HomeCtrl", ["$scope", '$state', function($scope, Posts, $state, $cordovaSocialSharing) {
+upliftApp.controller("HomeCtrl", ['$ionicPlatform', '$scope', '$cordovaSocialSharing', '$state', function($ionicPlatform, $scope, $cordovaSocialSharing, Posts, $state) {
 
-  $scope.shareAnywhere = function(post){
-    // console.log("SHARE", post.body)
-    $cordovaSocialSharing.share(post.body, "Check out this post from Uplift!", null, null);
-  }
+  $scope.shareAnywhere = function(){
+    $ionicPlatform.ready(function() {
+    console.log("ran");
+    $scope.$evalAsync(function(){
+      $cordovaSocialSharing.share("test", "Check out this post from Uplift!", null, "http://www.google.com");
+    })
+  })
+}
 
-// $scope.shareViaTwitter = function() {
-//     $cordovaSocialSharing.shareViaTwitter("Check out the posts on Uplift App for " + device.platform, null, device.platform == "Android" ? "GOOGLE_PLAY_URL" : "ITUNES_URL");
-// }
+
+
 
   var ref = new Firebase("https://upliftapp.firebaseio.com/posts");
   ref.on("value", function(snapshot) {
@@ -34,8 +37,7 @@ upliftApp.controller("HomeCtrl", ["$scope", '$state', function($scope, Posts, $s
       console.log("The read failed: " + errorObject.code);
     });
 
-// $scope.post = { url: 'http://', title: '', timestamp:
-// Firebase.ServerValue.TIMESTAMP };
+// $state.go('tab.home', {}, { reload: true });
 
 
 }]);
