@@ -2,7 +2,7 @@ var upliftApp = angular.module('starter', ['ionic', 'ngCordova', 'ui.router', 'f
 
 
 
-upliftApp.run(function($ionicPlatform) {
+upliftApp.run(function($ionicPlatform, $cordovaStatusbar) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -11,14 +11,16 @@ upliftApp.run(function($ionicPlatform) {
     }
     if (window.StatusBar) {
       StatusBar.overlaysWebView(true);
-      $cordovaStatusbar.styleHex('#387ef5')
-      // org.apache.cordova.statusbar required
+      $cordovaStatusbar.styleColor('white')
+      // // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
+
     }
 
 
   });
 });
+
 
 
 
@@ -84,6 +86,6 @@ upliftApp.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/home');
+  $urlRouterProvider.otherwise('/tab/login');
 
 });

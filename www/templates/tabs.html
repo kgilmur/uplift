@@ -6,7 +6,7 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive" ng-controller="LoginCtrl">
 
   <!-- Login Tab -->
-  <ion-tab class="{{showTab()}}" title="Login" icon-off="ion-locked" icon-on="ion-locked" href="#/tab/login">
+  <ion-tab class="tabs-item-hide {{showTab()}}" title="Login" icon-off="ion-locked" icon-on="ion-locked" href="#/tab/login">
     <ion-nav-view name="tab-login"></ion-nav-view>
   </ion-tab>
 
@@ -24,7 +24,7 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
   <!-- Account Tab -->
-  <ion-tab class="{{hiddenTab()}}" title="Profile" icon-off="ion-person" icon-on="ion-person" href="#/tab/profile">
+  <ion-tab class="{{hiddenTab()}}" title="Profile" icon-off="ion-person" icon-on="ion-person" href="#/tab/profile" ng-controller="HomeCtrl">
     <ion-nav-view name="tab-profile"></ion-nav-view>
 
   </ion-tab>

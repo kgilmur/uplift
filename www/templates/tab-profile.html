@@ -8,19 +8,19 @@
   </div>
  -->
      <ion-content class="background">
+
     <div class="list card">
-
-
 
       <ion-item class="item-remove-animate item-static" ng-repeat="personalpost in personalposts" type="item-text-wrap">
       <div class="item item-divider item-positive"></div>
         <!-- <img ng-src="{{chat.face}}"> -->
 
+
         <p class="wrap">{{personalpost.body}}</p>
 
         <button class="button button-clear date"><i class="icon"></i>{{personalpost.created_at|date:"medium"}}</button>
         <button class="button button-clear share" ng-click="delete($index)"><i class="icon ion-trash-a"></i></button>
-        <button class="button button-clear share" ng-click="shareAnywhere(post)"><i class="icon ion-share"></i></button>
+        <button class="button button-clear share" ng-click="shareAnywhere(personalpost)"><i class="icon ion-share"></i></button>
 
       </ion-item>
 

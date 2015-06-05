@@ -1,11 +1,11 @@
 <ion-view view-title="Uplift the World" ng-controller="NewCtrl">
   <ion-content class="padding">
     <br>
-    <br>
+
       <form name="newform">
         <div class="list">
           <label class="item item-input">
-            <textarea rows="6" maxlength="3000" placeholder="Who inspired you today? Who went out of their way to help you? Send a shout out! Share your story!" ng-model="body"></textarea>
+            <textarea id="textareaform" rows="6" maxlength="3000" placeholder="Who inspired you today? Who went out of their way to help you? Send a shout out! Share your story!" ng-model="body"></textarea>
           </label>
         </div>
         <div class="padding">
@@ -14,6 +14,13 @@
       </form>
 
 
+<br>
+
+
+  <div class="quotes">{{quotes}}</div>
+
+
 
   </ion-content>
+
 </ion-view>

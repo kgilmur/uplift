@@ -1,13 +1,12 @@
 upliftApp.controller("HomeCtrl", ['$ionicPlatform', '$scope', '$cordovaSocialSharing', '$state', function($ionicPlatform, $scope, $cordovaSocialSharing, Posts, $state) {
 
-  $scope.shareAnywhere = function(){
+  $scope.shareAnywhere = function(post){
     $ionicPlatform.ready(function() {
-    console.log("ran");
-    $scope.$evalAsync(function(){
-      $cordovaSocialSharing.share("test", "Check out this post from Uplift!", null, "http://www.google.com");
+      $scope.$evalAsync(function(){
+        $cordovaSocialSharing.share(post.body, "Check Out This Post From Uplift!", '../img/tlogo.png', null);
+      })
     })
-  })
-}
+  }
 
 
 
@@ -30,6 +29,7 @@ upliftApp.controller("HomeCtrl", ['$ionicPlatform', '$scope', '$cordovaSocialSha
         // console.log($scope.posts)
         //   $scope.created_at = new Date();
         // console.log("DATE!", $scope.created_at)
+        // $state.go('tab.home', {}, { reload: false });
       });
 
 
@@ -37,7 +37,6 @@ upliftApp.controller("HomeCtrl", ['$ionicPlatform', '$scope', '$cordovaSocialSha
       console.log("The read failed: " + errorObject.code);
     });
 
-// $state.go('tab.home', {}, { reload: true });
 
 
 }]);

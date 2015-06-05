@@ -1,4 +1,12 @@
-upliftApp.controller('ProfileCtrl', ['$scope', '$rootScope', '$state', function($scope, $rootScope, $state) {
+upliftApp.controller('ProfileCtrl', ['$scope', '$rootScope', '$state', '$ionicPlatform', '$cordovaSocialSharing', '$ionicPopup', function($scope, $rootScope, $state, $ionicPlatform, $cordovaSocialSharing, $ionicPopup) {
+
+  $scope.shareAnywhere = function(personalpost){
+    $ionicPlatform.ready(function() {
+      $scope.$evalAsync(function(){
+        $cordovaSocialSharing.share(personalpost.body, "Check Out This Post From Uplift!", '../img/tlogo.png', null);
+      })
+    })
+  }
 
   var ref = new Firebase("https://upliftapp.firebaseio.com/posts");
   var query = ref.orderByChild('created_at')
@@ -18,11 +26,17 @@ upliftApp.controller('ProfileCtrl', ['$scope', '$rootScope', '$state', function(
       newresults.push(results[i])
       newresults.reverse();
       $scope.personalposts = newresults;
-      // console.log("HEY", newresults)
+      // console.log("HEY!", newresults)
+
       // $scope.created_at = new Date();
     }
 
-  }
+    }
+
+
+
+
+
 
   $scope.delete = function(index) {
     var newVar = newresults[index].created_at;

@@ -48,14 +48,30 @@ $dark:                            #444 !default;
 .newform {
   text-align: center; }
 
+#textareaform {
+  font-size: 16px;
+  line-height: 18px; }
+
+#hidesomething {
+  font-size: 20px;
+  line-height: 2;
+  padding: 10px;
+  text-align: center; }
+
+.quotes {
+  color: #444;
+  font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  text-align: center;
+  padding: 25px; }
+
 img {
-  height: 300px;
-  width: auto;
+  height: auto;
+  width: 100%;
   z-index: 2; }
 
 .loginText {
   text-align: center;
-  color: white;
+  color: white !important;
   font-size: 16px; }
 
 #gohome {
@@ -82,7 +98,7 @@ img {
   text-align: justify; }
 
 .item-divider {
-  min-height: 10px !important;
+  min-height: 5px !important;
   margin-bottom: 10px !important;
   margin-top: -16px !important;
   margin-left: -16px !important;

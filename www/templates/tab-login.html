@@ -1,7 +1,7 @@
 <ion-view title="Connect to Uplift" ng-controller="LoginCtrl" hide-nav-bar="true">
     <ion-content has-header="true" padding="true" class="login center">
 
-        <div class"logo">
+        <div class"logo center">
         <img ng-src="{{ path }}"/>
         </div>
 
@@ -20,11 +20,8 @@
         </button>
 
         </div>
-<br>
-<br>
-        <div class="loginText">
-            <p>Or Uplift Anonymously</p>
-        </div>
+
+        <button class="button button-clear button-block loginText center {{hideLogin()}}" ng-click="continue()">Or Uplift Anonymously</div>
 
     </ion-content>
 

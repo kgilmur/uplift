@@ -2,6 +2,8 @@ upliftApp.controller('LoginCtrl', ['$scope', '$rootScope',  '$state', '$location
 
 $scope.path = 'img/tlogo.png';
 
+
+
    $scope.hiddenTab = function(){
     if ($rootScope.currentUser){
       return "ng-show";
@@ -100,6 +102,10 @@ $scope.path = 'img/tlogo.png';
       $rootScope.currentUser = false;
       $state.go($state.current, {}, { reload: true });
       // console.log("user is logged out", $rootScope.currentUser)
+  }
+
+  $scope.continue = function() {
+    $state.go('tab.home');
   }
 
   $scope.hideLogin = function() {
