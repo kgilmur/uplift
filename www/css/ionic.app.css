@@ -15,6 +15,7 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+/*// global*/
 .center {
   display: -webkit-box;
   display: -moz-box;
@@ -45,25 +46,7 @@ $dark:                            #444 !default;
   -ms-flex-align: center;
   align-items: center; }
 
-.newform {
-  text-align: center; }
-
-#textareaform {
-  font-size: 16px;
-  line-height: 18px; }
-
-#hidesomething {
-  font-size: 20px;
-  line-height: 2;
-  padding: 10px;
-  text-align: center; }
-
-.quotes {
-  color: #444;
-  font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-  text-align: center;
-  padding: 25px; }
-
+/*Login Page*/
 img {
   height: auto;
   width: 100%;
@@ -74,15 +57,35 @@ img {
   color: white !important;
   font-size: 16px; }
 
-#gohome {
-  color: white !important; }
-
 .login {
   background-color: #E91E63; }
 
 .logins {
   margin-top: 75px; }
 
+#logout {
+  border-color: white !important; }
+
+#facebook {
+  background-color: #387ef5 !important;
+  border-color: #0c63ee !important;
+  color: white !important; }
+
+/*New Page*/
+.newform {
+  text-align: center; }
+
+#textareaform {
+  font-size: 16px;
+  line-height: 18px; }
+
+.quotes {
+  color: #444;
+  font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  text-align: center;
+  padding: 25px; }
+
+/*Home Page*/
 .date {
   float: left;
   font-size: 10px !important; }
@@ -90,6 +93,7 @@ img {
 .share {
   float: right; }
 
+/*Profile Page*/
 .background {
   background-color: #f8f8f8; }
 
@@ -103,14 +107,6 @@ img {
   margin-top: -16px !important;
   margin-left: -16px !important;
   margin-right: -16px !important; }
-
-#logout {
-  border-color: white !important; }
-
-#facebook {
-  background-color: #387ef5 !important;
-  border-color: #0c63ee !important;
-  color: white !important; }
 
 /*!
   Ionicons, v2.0.1

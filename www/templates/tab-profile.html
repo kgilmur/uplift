@@ -1,20 +1,11 @@
 <ion-view view-title="Your Uplift" ng-controller="ProfileCtrl">
 
-
-<!--   <div class="card {{showProfileTab()}}">
-    <div class="item item-text-wrap">
-      Please login to view your profile!
-    </div>
-  </div>
- -->
-     <ion-content class="background">
+  <ion-content class="background">
 
     <div class="list card">
 
       <ion-item class="item-remove-animate item-static" ng-repeat="personalpost in personalposts" type="item-text-wrap">
       <div class="item item-divider item-positive"></div>
-        <!-- <img ng-src="{{chat.face}}"> -->
-
 
         <p class="wrap">{{personalpost.body}}</p>
 
@@ -25,5 +16,7 @@
       </ion-item>
 
     </div>
+
   </ion-content>
+
 </ion-view>
